@@ -1,3 +1,6 @@
+05/04/2004: 0.3-2
+  * added depends: R (>= 1.9.0) for stats
+
 04/20/2004: 0.3-1
   * added namespace
 
