@@ -5,7 +5,7 @@
  Plot the SOM in a 2-dim map with means and sd bars.
 }
 \usage{
-\method{plot}{som}(x, sdbar=1, ylim=c(-5, 5), color=TRUE,
+\method{plot}{som}(x, sdbar=1, ylim=c(-3, 3), color=TRUE,
 ntik=3, yadj=0.1, xlab="", ylab="", ...)
 }
 \arguments{
