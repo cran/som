@@ -32,6 +32,4 @@ ntik=3, yadj=0.1, xlab="", ylab="", ...)
 foo <- som(matrix(rnorm(1000), 250), 3, 5)
 plot(foo, ylim=c(-1, 1))
 }
-\keyword{
-  hplot
-}
+\keyword{hplot}

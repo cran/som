@@ -26,8 +26,6 @@ normalize(x, byrow=TRUE)
 \seealso{
   \code{\link{filtering}}.
 }
-\keyword{
-  manip
-}
+\keyword{manip}
 
 

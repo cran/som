@@ -136,6 +136,6 @@ yeast.f <- filtering(yeast)
 yeast.f.n <- normalize(yeast.f)
 foo <- som(yeast.f.n, xdim=5, ydim=6)
 foo <- som(yeast.f.n, xdim=5, ydim=6, topol="hexa", neigh="gaussian")
-}
 plot(foo)
+}
 \keyword{cluster}

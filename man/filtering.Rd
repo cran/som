@@ -35,7 +35,5 @@ filtering(x, lt=20, ut=16000, mmr=3, mmd=200)
 \seealso{
 \code{\link{normalize}}.
 }
-\keyword{
-  manip
-}
+\keyword{manip}
 
