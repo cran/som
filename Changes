@@ -1,3 +1,6 @@
+09/18/2004: 0.3-3
+  * fixed compiling error for gcc 3.4.2
+
 05/04/2004: 0.3-2
   * added depends: R (>= 1.9.0) for stats
 
