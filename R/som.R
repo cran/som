@@ -101,7 +101,7 @@ som <- function(data, xdim, ydim,
                    inv.alp.c=inv.alp.c[2])
 
   ## sparamv <- list(alpha=alpha.type, neigh=neigh.type, topol=topol.type)
-  foo <- .Call("som_bat", as.matrix(data), code, paramv1, paramv2)
+  foo <- .Call("som_bat", as.matrix(data), code, paramv1, paramv2, PACKAGE="som")
 
   if (!is.null(names(data))) names(foo$code) <- names(data)
   foo$visual <- as.data.frame(foo$visual)
@@ -155,7 +155,7 @@ som.train <- function(data, code, xdim, ydim,
                  alpha0=alpha[1], radius0=radius[1], rlen=rlen[1],
                  err.radius=err.radius, xdim=xdim, ydim=ydim,
                  inv.alp.c=inv.alp.c[1])
-  foo <- .Call("som", as.matrix(data), code, paramv)
+  foo <- .Call("som", as.matrix(data), code, paramv, PACKAGE="som")
   if (!is.null(names(data))) names(foo$code) <- names(data)
   foo$visual <- as.data.frame(foo$visual)
   names(foo$visual) <-  c("x", "y", "qerror")
@@ -199,7 +199,7 @@ som.update <- function(obj, alpha = NULL, radius = NULL,
   if (is.null(inv.alp.c)) paramv$inv.alp.c <- paramv$rlen / 100
   paramv$err.radius <- err.radius
   
-  foo <- .Call("som", as.matrix(obj$data), obj$code, paramv)
+  foo <- .Call("som", as.matrix(obj$data), obj$code, paramv, PACKAGE="som")
   if (!is.null(names(data))) names(foo$code) <- names(data)
   foo$visual <- as.data.frame(foo$visual)
   names(foo$visual) <-  c("x", "y", "qerror")
@@ -231,7 +231,7 @@ qerror <- function(obj, err.radius = 1) {
     ## som.update(obj, rlen=0, err.radius=err.radius)$qerror
     paramv <- som.par(obj)
     paramv$err.radius <- err.radius
-    .Call("som", as.matrix(obj$data), obj$code, paramv)$qerror
+    .Call("som", as.matrix(obj$data), obj$code, paramv, PACKAGE="som")$qerror
   }
 }
 
