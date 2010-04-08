@@ -1,3 +1,7 @@
+04/08/2010: 0.3-5
+  * fixed a compiling error on Solaris (thank to Brian Ripley) 
+    by removing #include <math.h>.
+
 09/18/2004: 0.3-4
   * fixed compiling error for gcc 3.4.2
 

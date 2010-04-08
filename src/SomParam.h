@@ -1,4 +1,4 @@
-#include <math.h>
+//#include <cmath.h>
 #include "sub.h"
 
 //#define INV_ALPHA_CONST 100.0
