@@ -108,10 +108,10 @@ void som_top(DMatrix &data, DMatrix &code, DMatrix &vis,
 }
 
 
-extern "C"{
+// extern "C"{
 #include <R.h>
 #include <Rdefines.h>
-}
+// }
 
 DMatrix asDMatrix(SEXP a) {
   double *x;

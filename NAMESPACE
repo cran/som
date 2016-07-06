@@ -1,6 +1,10 @@
 useDynLib(som)
 
-importFrom(stats, prcomp)
+importFrom("grDevices", "rainbow")
+importFrom("graphics", "axis", "lines", "plot", "rect", "segments",
+           "text")
+importFrom("stats", "runif", "prcomp", "sd")
+importFrom("utils", "data")
 
 export(
   "filtering",
