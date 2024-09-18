@@ -129,7 +129,7 @@ SEXP asSEXP(const DMatrix &a) {
   double *p = NUMERIC_POINTER(val);
   const double *q = a.begin();
   for (int i = 0; i < size; i++) p[i] = q[i];
-  SET_CLASS(val, ScalarString(mkChar("matrix")));
+  SET_CLASS(val, Rf_ScalarString(Rf_mkChar("matrix")));
 
   SEXP dim;
   PROTECT(dim = NEW_INTEGER(2));
@@ -141,9 +141,9 @@ SEXP asSEXP(const DMatrix &a) {
 }
 
 SEXP getListElement(SEXP list, char *str) {
-  SEXP elmt = R_NilValue, names = getAttrib(list, R_NamesSymbol);
+  SEXP elmt = R_NilValue, names = Rf_getAttrib(list, R_NamesSymbol);
   int i;
-  for (i = 0; i < length(list); i++)
+  for (i = 0; i < Rf_length(list); i++)
     if (strcmp(CHAR(STRING_ELT(names, i)), str) == 0) {
       elmt = VECTOR_ELT(list, i);
       break;
@@ -188,9 +188,9 @@ extern "C"{
     SET_VECTOR_ELT(ans, 2, qe);    
 
     PROTECT(names = NEW_STRING(3));
-    SET_STRING_ELT(names, 0, mkChar("code"));
-    SET_STRING_ELT(names, 1, mkChar("visual"));
-    SET_STRING_ELT(names, 2, mkChar("qerror"));
+    SET_STRING_ELT(names, 0, Rf_mkChar("code"));
+    SET_STRING_ELT(names, 1, Rf_mkChar("visual"));
+    SET_STRING_ELT(names, 2, Rf_mkChar("qerror"));
     
     SET_NAMES(ans, names);
     UNPROTECT(3);
@@ -215,9 +215,9 @@ extern "C"{
     SET_VECTOR_ELT(ans, 2, qe);    
 
     PROTECT(names = NEW_STRING(3));
-    SET_STRING_ELT(names, 0, mkChar("code"));
-    SET_STRING_ELT(names, 1, mkChar("visual"));
-    SET_STRING_ELT(names, 2, mkChar("qerror"));
+    SET_STRING_ELT(names, 0, Rf_mkChar("code"));
+    SET_STRING_ELT(names, 1, Rf_mkChar("visual"));
+    SET_STRING_ELT(names, 2, Rf_mkChar("qerror"));
     
     SET_NAMES(ans, names);
     UNPROTECT(3);

@@ -354,7 +354,7 @@ somgrids <- function(xdim, ydim, color,
 
 plot.som <- function(x, sdbar=1, ylim=c(-3, 3), color=TRUE, ntik=3, yadj=0.1,
                      xlab="", ylab="", ...) {
- if (class(x) != "som" ) stop("The funciton must apply to a som object.\n")
+ if (!inherits(x, "som")) stop("The funciton must apply to a som object.\n")
  hexa <- (x$topol == "hexa")
  if (hexa) d <- 1/2
  else d <- 0

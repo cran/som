@@ -125,7 +125,7 @@ som.project(obj, newdat)
 \references{
   Kohonen, Hynninen, Kangas, and Laaksonen (1995), SOM-PAK, the
   Self-Organizing Map Program Package (version 3.1).
-  http://www.cis.hut.fi/research/papers/som\_tr96.ps.Z}
+  \url{http://www.cis.hut.fi/research/papers/som_tr96.ps.Z}}
 \author{
   Jun Yan <jyan@stat.uiowa.edu>
 }

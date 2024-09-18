@@ -24,7 +24,7 @@ ntik=3, yadj=0.1, xlab="", ylab="", ...)
   mimic what GENECLUSTER does. The ylim is hardcoded so that only
   standardized data could be properly plotted.
 
-  There are visualization methods like umat and sammon in SOM\_PAK3.1,
+  There are visualization methods like umat and sammon in SOM_PAK3.1,
   but not implemented here. 
 }
 \author{ Jun Yan <jyan@stat.uiowa.edu> }
